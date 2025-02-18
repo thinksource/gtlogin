@@ -40,3 +40,9 @@ model ResetToken {
   userId    String
   user      User     @relation(fields: [userId], references: [id])
 }
+
+// 添加测试环境
+datasource testDb {
+  provider = "postgresql"
+  url      = env("TEST_DATABASE_URL")
+}

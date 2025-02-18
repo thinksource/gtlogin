@@ -34,3 +34,5 @@ prisma.$connect().then(() => {
   console.error('Database connection failed:', err)
   process.exit(1)
 })
+
+export default app
